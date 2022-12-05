@@ -52,6 +52,7 @@ class AD():
             self.y.append(d)
             self.node.append(root)
             # pred = d.pass_tree()
+
             e = self.error(d, dn, cl, root)
             self.al.append(self.alpha(e))
             self.w = self.up_w(d, dn, cl, root)
