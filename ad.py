@@ -51,7 +51,6 @@ class AD():
             d, root = self.decision_stump(dn, cl, self.w)
             self.y.append(d)
             self.node.append(root)
-            # pred = d.pass_tree()
 
             e = self.error(d, dn, cl, root)
             self.al.append(self.alpha(e))
