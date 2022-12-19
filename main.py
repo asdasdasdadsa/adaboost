@@ -1,16 +1,9 @@
-# This is a sample Python script.
+import dss
+import ad
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+d = dss.Titanic("C:/Users/lul-0/PycharmProjects/adaboost/train_data.csv", "C:/Users/lul-0/PycharmProjects/adaboost/test_data.csv")
+dannn = d()
+x_train, t_train, x_test, t_test = dannn['train_input'], dannn['train_target'], dannn['test_input'], dannn['test_target']
+aadd = ad.AD(len(x_train), 20)
+aadd.adadoost(x_train, t_train)
+aadd.confusion_matrix(x_test, t_test)
